@@ -1,0 +1,14 @@
+# Base leve com Python 3.11
+FROM python:3.11-slim
+
+# Define o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Garante o envio imediato de logs para o terminal (sem buffer)
+ENV PYTHONUNBUFFERED=1
+
+# Copia a pasta src para dentro do container
+COPY src/ /app/src/
+
+# Comando que executa a aplicação CLI
+CMD ["python", "src/main.py"]
