@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  tasktracker:
+    build: .
+    container_name: tasktracker-app
+    # Configurações para permitir interatividade (input no terminal)
+    stdin_open: true
+    tty: true
